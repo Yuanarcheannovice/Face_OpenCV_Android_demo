@@ -18,10 +18,20 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url 'https://raw.githubusercontent.com/Yuanarcheannovice/Android_Lib/master/maven' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+//全局设置版本
+ext {
+    minSdkVersion = 19
+    targetSdkVersion = 19
+    compileSdkVersion = 28
+    supportVersion = '28.0.0'
+    constraintLayout='1.1.3'
+    rxJavaVersion='2.2.4'
+    rxAndroidVersion='2.1.0'
 }
